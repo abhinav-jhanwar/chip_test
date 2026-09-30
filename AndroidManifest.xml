@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Test app: posts a promoted (Live Update) notification whose private chip text differs from
+     its public version, to check what the status bar chip shows while the lock screen is
+     occluded. For testing only. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.diamaneos.test.chipleak">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
+    <application android:label="Chip leak test" android:allowBackup="false">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
